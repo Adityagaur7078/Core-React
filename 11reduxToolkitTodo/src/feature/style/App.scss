@@ -1,0 +1,89 @@
+// App.scss
+
+$primary: #6366f1;
+$primary-hover: #4f46e5;
+$danger: #ef4444;
+$danger-hover: #dc2626;
+$background: #18181b;
+$card: #27272a;
+$text: #ffffff;
+$border-radius: 8px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background;
+  color: $text;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: $border-radius;
+    outline: none;
+  }
+
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: $border-radius;
+    background: $primary;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}
+
+.todo-list {
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $card;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: $border-radius;
+
+    button {
+      background: $danger;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: $danger-hover;
+      }
+    }
+  }
+}
